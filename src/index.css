@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Devotionarium Design System - Traditional Catholic Aesthetic */
+
+@layer base {
+  :root {
+    /* Main palette - Antique book inspired */
+    --background: 35 30% 90%;
+    --foreground: 25 30% 15%;
+
+    --card: 35 25% 88%;
+    --card-foreground: 25 30% 15%;
+
+    --popover: 35 25% 88%;
+    --popover-foreground: 25 30% 15%;
+
+    /* Primary - Dark brown/sepia */
+    --primary: 25 35% 20%;
+    --primary-foreground: 35 30% 92%;
+
+    /* Secondary - Lighter cream */
+    --secondary: 35 20% 85%;
+    --secondary-foreground: 25 35% 20%;
+
+    /* Muted - Aged paper */
+    --muted: 35 15% 80%;
+    --muted-foreground: 25 20% 40%;
+
+    /* Accent - Subtle gold */
+    --accent: 40 50% 45%;
+    --accent-foreground: 35 30% 95%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 30 20% 70%;
+    --input: 30 20% 75%;
+    --ring: 25 35% 25%;
+
+    --radius: 0.25rem;
+
+    /* Custom Devotionarium colors */
+    --cream: 35 30% 90%;
+    --ivory: 40 25% 93%;
+    --cafe-au-lait: 30 25% 75%;
+    --aged-paper: 35 20% 85%;
+    --dark-brown: 25 40% 18%;
+    --sepia: 25 35% 30%;
+    --gold: 40 55% 50%;
+    --gold-subtle: 40 40% 65%;
+
+    /* Sidebar - keeping for compatibility */
+    --sidebar-background: 35 30% 90%;
+    --sidebar-foreground: 25 30% 15%;
+    --sidebar-primary: 25 35% 20%;
+    --sidebar-primary-foreground: 35 30% 92%;
+    --sidebar-accent: 35 20% 85%;
+    --sidebar-accent-foreground: 25 35% 20%;
+    --sidebar-border: 30 20% 70%;
+    --sidebar-ring: 25 35% 25%;
+  }
+
+  .dark {
+    /* Dark mode maintains warm tones */
+    --background: 25 30% 12%;
+    --foreground: 35 25% 88%;
+
+    --card: 25 25% 15%;
+    --card-foreground: 35 25% 88%;
+
+    --popover: 25 25% 15%;
+    --popover-foreground: 35 25% 88%;
+
+    --primary: 35 25% 85%;
+    --primary-foreground: 25 30% 12%;
+
+    --secondary: 25 20% 20%;
+    --secondary-foreground: 35 25% 88%;
+
+    --muted: 25 15% 25%;
+    --muted-foreground: 35 15% 60%;
+
+    --accent: 40 50% 45%;
+    --accent-foreground: 35 30% 95%;
+
+    --border: 25 20% 25%;
+    --input: 25 20% 25%;
+    --ring: 35 25% 70%;
+
+    --sidebar-background: 25 30% 12%;
+    --sidebar-foreground: 35 25% 88%;
+    --sidebar-primary: 35 25% 85%;
+    --sidebar-primary-foreground: 25 30% 12%;
+    --sidebar-accent: 25 20% 20%;
+    --sidebar-accent-foreground: 35 25% 88%;
+    --sidebar-border: 25 20% 25%;
+    --sidebar-ring: 35 25% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-title;
+  }
+}
+
+@layer components {
+  /* Prayer Card Style - Mobile First */
+  .prayer-card {
+    @apply relative flex items-center justify-center gap-3 px-4 py-4 sm:px-8 sm:py-5;
+    @apply bg-gradient-to-br from-ivory via-cream to-aged-paper;
+    @apply border border-sepia/30 rounded-2xl sm:rounded-3xl;
+    @apply shadow-md hover:shadow-xl;
+    @apply transition-all duration-300 ease-in-out;
+    @apply hover:bg-gradient-to-br hover:from-primary hover:via-primary hover:to-sepia;
+    @apply hover:border-primary/50;
+    @apply active:scale-[0.98];
+  }
+
+  .prayer-card::before {
+    content: '';
+    @apply absolute inset-1.5 sm:inset-2 border border-sepia/15 rounded-xl sm:rounded-2xl pointer-events-none;
+    @apply transition-all duration-300;
+  }
+
+  .prayer-card:hover::before {
+    @apply border-primary-foreground/20;
+  }
+
+  .prayer-card-ornament {
+    @apply text-accent text-sm sm:text-base opacity-60 transition-all duration-300;
+  }
+
+  .prayer-card:hover .prayer-card-ornament {
+    @apply text-gold-subtle opacity-90;
+    
+  }
+
+  .prayer-card-ornament.left {
+    transform: scaleX(-1);
+  }
+
+  /* Baroque frame */
+  .baroque-frame {
+    @apply relative p-8;
+    background: linear-gradient(
+      135deg,
+      hsl(var(--ivory)) 0%,
+      hsl(var(--cream)) 50%,
+      hsl(var(--aged-paper)) 100%
+    );
+    border: 2px solid hsl(var(--sepia) / 0.4);
+    box-shadow: 
+      inset 0 0 30px hsl(var(--sepia) / 0.1),
+      0 4px 20px hsl(var(--dark-brown) / 0.15);
+  }
+
+  .baroque-frame::before {
+    content: '';
+    @apply absolute inset-2 border border-sepia/20 pointer-events-none;
+  }
+
+  /* Ornamental divider */
+  .ornament-divider {
+    @apply flex items-center justify-center gap-4 my-6;
+    color: hsl(var(--sepia));
+  }
+
+  .ornament-divider::before,
+  .ornament-divider::after {
+    content: '';
+    @apply flex-1 h-px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      hsl(var(--sepia) / 0.5),
+      transparent
+    );
+  }
+
+  /* Vertical baroque divider for bilingual text */
+  .vertical-divider {
+    @apply relative w-px;
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      hsl(var(--sepia) / 0.3) 10%,
+      hsl(var(--sepia) / 0.5) 50%,
+      hsl(var(--sepia) / 0.3) 90%,
+      transparent 100%
+    );
+  }
+
+  .vertical-divider::before,
+  .vertical-divider::after {
+    content: '✦';
+    @apply absolute left-1/2 -translate-x-1/2 text-accent text-xs;
+  }
+
+  .vertical-divider::before {
+    @apply top-4;
+  }
+
+  .vertical-divider::after {
+    @apply bottom-4;
+  }
+
+  /* Prayer text styling */
+  .prayer-text {
+    @apply font-body text-lg leading-relaxed text-foreground/90;
+    text-align: justify;
+    hyphens: auto;
+  }
+
+  .prayer-text-latin {
+    @apply prayer-text italic;
+  }
+
+  /* Title ornaments */
+  .title-ornate {
+    @apply relative inline-block;
+  }
+
+  .title-ornate::before,
+  .title-ornate::after {
+    content: '—';
+    @apply mx-4 text-accent;
+  }
+}
+
+@layer utilities {
+  .font-title {
+    font-family: 'Cinzel', serif;
+  }
+
+  .font-body {
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .text-sepia {
+    color: hsl(var(--sepia));
+  }
+
+  .bg-cream {
+    background-color: hsl(var(--cream));
+  }
+
+  .bg-ivory {
+    background-color: hsl(var(--ivory));
+  }
+
+  .bg-aged-paper {
+    background-color: hsl(var(--aged-paper));
+  }
+
+  .border-sepia {
+    border-color: hsl(var(--sepia));
+  }
+
+  .text-gold {
+    color: hsl(var(--gold));
+  }
+
+  .text-dark-brown {
+    color: hsl(var(--dark-brown));
+  }
+}

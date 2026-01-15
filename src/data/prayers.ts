@@ -1,11 +1,13 @@
+import { title } from "process";
+
 export interface Prayer {
   id: string;
   titlePortugues: string;
-  titleLatim: string;
+  titleLatim?: string;
   textPortugues: string;
-  textLatim: string;
+  textLatim?: string;
 }
-
+//℣.  ℟.
 export interface PrayerCategory {
   categoryId: string;
   categoryTitle: string;
@@ -141,23 +143,29 @@ Hosanna in excelsis!`,
         id: "angelus",
         titlePortugues: "Ângelus",
         titleLatim: "Angelus",
-        textPortugues: `O Anjo do Senhor anunciou a Maria. 
+        textPortugues: `V. O Anjo do Senhor anunciou a Maria. 
 R. E ela concebeu do Espírito Santo.
-Eis aqui a serva do Senhor.
+Ave Maria...
+V. Eis aqui a serva do Senhor.
 R. Faça-se em mim segundo a vossa palavra.
-E o Verbo se fez carne.
+Ave Maria...
+V.  E o Verbo se fez carne.
 R. E habitou entre nós.
+Ave Maria...
 
 Oremos.
 Infundi, Senhor, em nossos corações a vossa graça, para que, conhecendo a anunciação do Anjo e a encarnação de Jesus Cristo, vosso Filho, cheguemos à glória da ressurreição.
 Pelo mesmo Cristo Senhor Nosso.
 Amém.`,
-        textLatim: `Ángelus Dómini nuntiávit Mariae.
+        textLatim: `V. Ángelus Dómini nuntiávit Mariae.
 R. Et concépit de Spiritu Sancto.
-Écce ancílla Dómini.
+Ave María...
+V. Écce ancílla Dómini.
 R. Fiat míhi secúndum verbum túum.
-Et Verbum caro factum est.
+Ave María...
+V. Et Verbum caro factum est.
 R. Et habitávit in nobis.
+Ave María...
 
 Oremus.
 Gratiam tuam, quaesumus, Dómine, méntibus nostris infúnde; ut qui, Angelo nuntiánte, Christi Fílii tui incarnatiónem cognóvimus, per passiónem eius et crucem ad resurrectiónis gloriam perducámur.
@@ -211,24 +219,51 @@ Amen.`,
     categoryId: "oracoes-manha",
     categoryTitle: "Orações da Manhã",
     prayers: [
-      {
-        id: "oracao-manha",
-        titlePortugues: "Oração da Manhã",
-        titleLatim: "Oratio Matutina",
-        textPortugues:
-          "Meu Deus, eu Vos ofereço as orações, obras, alegrias e sofrimentos deste dia, pela glória de Vosso Santo Nome e salvação das almas. Concedei-me a graça de evitar todo pecado e de cumprir fielmente a Vossa santa vontade. Amém.",
-        textLatim:
-          "Deus meus, Tibi óffero oratiónes, ópera, gáudia et dolóres huius diéi, pro glória Sancti Nóminis Tui et salúte animárum. Concéde mihi grátiam vitándi omne peccátum et fidéliter adimpléndí sanctam voluntátem Tuam. Amen.",
-      },
-      {
-        id: "oferecimento-dia",
-        titlePortugues: "Oferecimento do Dia",
-        titleLatim: "Oblatio Diei",
-        textPortugues:
-          "Ó Jesus, por meio do Imaculado Coração de Maria, ofereço-Vos as orações, trabalhos, alegrias e sofrimentos deste dia, pelas intenções do Vosso Sagrado Coração. Amém.",
-        textLatim:
-          "O Iesu, per Cor Immaculátum Maríæ, óffero Tibi oratiónes, labóres, gáudia et dolóres huius diéi, pro intentionibus Sacratíssimi Cordis Tui. Amen.",
-      },
+     
+    
+  {
+    id: "atos-abandono",
+    titlePortugues: "Atos de Abandono",
+    titleLatim: "Actus Abandonationis",
+    textPortugues: "Em vossas mãos, ó meu Deus, eu me entrego. Virai e revirai esta argila, como a vasilha que se modela nas mãos do oleiro. Dai-lhe forma e em seguida despedaçai-a, se assim quiserdes; ela vos pertence e nada tem a dizer. Basta-me que ela sirva a todos os vossos desígnios e que em nada resista a vosso divino beneplácito, para o qual eu fui criado. Pedi, ordenai: que quereis que eu faça? Que quereis que eu deixe de fazer? Exaltado ou rebaixado, perseguido, consolado ou aflito, utilizado em vossas obras ou sem para nada servir, a mim não resta senão dizer, a exemplo de vossa Mãe Santíssima: Seja feito segundo a vossa palavra. Concedei-me o amor por excelência, o amor da cruz, não das cruzes heroicas cujo esplendor poderia nutrir o amor-próprio, mas das cruzes ordinárias de todos os dias: no caminho, na contradição, no esquecimento, no fracasso, nos falsos julgamentos, nas contrariedades, na frieza ou no entusiasmo dos outros, na enfermidade do corpo, nas trevas do espírito, no silêncio e na secura do coração. Somente então sabereis que vos amo, embora às vezes nem eu mesmo o saiba ou sinta; e isto me basta.",
+    textLatim: "In manus tuas, Deus meus, me trado. Verte et revolve hanc argillam sicut vas quod in manu figuli formatur. Da ei formam et postea confringe, si ita vis; tua est enim et nihil dicere potest. Sufficit mihi ut omnibus tuis consiliis inserviat nec ullo modo tuo divino beneplacito resistat, ad quod creatus sum. Iube, praecipe: quid vis ut faciam? Quid vis ut omittam? Exaltatus aut humiliatus, persecutus, consolatus aut afflictus, adhibitus in operibus tuis aut ad nihil utilis, nihil mihi restat nisi dicere, ad exemplum Sanctissimae Matris tuae: Fiat secundum verbum tuum. Concede mihi amorem excellentissimum, amorem crucis, non illarum crucium heroicorum quae amorem proprium alunt, sed crucium quotidianarum, quae in itinere vitae occurrunt: in contradictione, oblivione, defectu, falsis iudiciis, adversitatibus, frigiditate aut fervore aliorum, in infirmitate corporis, in tenebris spiritus, in silentio et ariditate cordis. Tunc tantum scies me te amare, etiamsi ego ipse id interdum nec sentiam nec intelligam; et hoc mihi sufficit."
+  },
+
+  {
+    id: "oferecimento-do-dia",
+    titlePortugues: "Oferecimento do Dia",
+    titleLatim: "Oblatio Diei",
+    textPortugues: "Senhor Deus, Rei do céu e da terra, dirige, santifica, conduz e governa neste dia nossos corações e nossos corpos, nossos sentimentos, palavras e ações, a fim de que, submissos à tua lei e agindo conforme os teus preceitos, mereçamos, por teu auxílio, ser salvos e livres nesta vida e na eternidade. Ó Salvador do mundo, que vives e reinas pelos séculos dos séculos. Amém.",
+    textLatim: "Dirigere et sanctificare, regere et gubernare dignare, Domine Deus, Rex caeli et terrae, hodie corda et corpora nostra, sensus, sermones et actus nostros in lege tua et in operibus mandatorum tuorum, ut hic et in aeternum, te auxiliante, salvi et liberi esse mereamur. Salvator mundi, qui vivis et regnas in saecula saeculorum. Amen."
+  },
+
+  {
+    id: "oracoes-manha-ao-vestir",
+    titlePortugues: "Orações da Manhã – Ao vestir-se",
+    titleLatim: "Oratio Matutina – Dum Vestitur",
+    textPortugues: "Jesus, Salvador meu, ofereço-me e consagro-me inteiramente e para sempre a ti, e por ti ao Eterno Pai. Eu te ofereço meu corpo, minha alma, meu espírito, meu coração, minha vida, todos os meus pensamentos, palavras e ações, as respirações e as batidas do meu coração, meus olhares e o uso dos meus sentidos, tudo quanto sou e possuo. Consagro tudo à tua glória, para que tudo seja louvor, adoração e amor a ti, Salvador meu. Eu te suplico que socorras as angústias dos pobres e, assim como me socorres para vestir meu corpo, reveste também minha alma de ti mesmo, de teu amor e de todas as virtudes.",
+    textLatim: "Iesu, Salvator meus, me ipsum tibi offero et consecro totum et in perpetuum, et per te Patri Aeterno. Offerro tibi corpus meum, animam meam, spiritum meum, cor meum, vitam meam, omnes cogitationes, verba et actiones meas, respirationes et pulsus cordis mei, oculos meos et usum omnium sensuum meorum, totum quod sum et possideo. Omnia gloriae tuae consecro, ut sint laus, adoratio et amor tibi, Salvator meus. Supplico ut pauperum angustias subleves et, sicut corpus meum vestis, ita animam meam te ipso, tuo amore omnibusque virtutibus induas."
+  },
+
+  {
+    id: "senhor-deus-todo-poderoso",
+    titlePortugues: "Senhor Deus Todo-poderoso",
+    titleLatim: "Domine Deus Omnipotens",
+    textPortugues: "Senhor Deus Todo-poderoso, que nos fizestes chegar ao princípio deste dia, salvai-nos hoje por vosso poder, para que não nos deixemos arrastar a pecado algum neste dia, mas que nossas palavras, pensamentos e obras tendam sempre ao cumprimento da vossa justiça. Por Cristo, nosso Senhor. Amém.",
+    textLatim: "Domine Deus omnipotens, qui ad principium huius diei nos pervenire fecisti, salva nos hodie tua virtute, ut in nullo peccato labamur, sed omnes cogitationes, verba et opera nostra ad implendam iustitiam tuam dirigantur. Per Christum Dominum nostrum. Amen."
+  },
+
+  {
+    id: "consagracao-diaria-nossa-senhora",
+    titlePortugues: "Consagração Diária a Nossa Senhora",
+    titleLatim: "Consecratio Quotidiana ad Beatam Virginem Mariam",
+    textPortugues: "Ó minha Senhora e minha Mãe, eu me ofereço todo a vós e, em prova da minha devoção para convosco, vos consagro neste dia meus olhos, meus ouvidos, minha boca, meu coração e todo o meu ser. E porque assim sou vosso, ó incomparável Mãe, guardai-me e defendei-me como coisa e propriedade vossa. Amém.",
+    textLatim: "O Domina mea et Mater mea, totus me tibi offero et, in testimonium devotionis meae erga te, tibi hodie consecro oculos meos, aures meas, os meum, cor meum atque totum meipsum. Quia igitur tuus sum, o incomparabilis Mater, conserva me et protege me ut rem et possessionem tuam. Amen."
+  }
+
+
+
+       
     ],
   },
   //

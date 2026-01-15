@@ -29,7 +29,7 @@ const BilingualPrayer = ({
               isLatin ? "prayer-text-latin" : "prayer-text"
             } flex gap-2`}
           >
-            <span className="font-bold text-primary min-w-[24px]">V.</span>
+            <span className="font-bold text-primary min-w-[24px]">℣.</span>
             <span>{trimmedLine.substring(2).trim()}</span>
           </p>
         );
@@ -43,10 +43,23 @@ const BilingualPrayer = ({
               isLatin ? "prayer-text-latin" : "prayer-text"
             } flex gap-2`}
           >
-            <span className="font-bold text-accent min-w-[24px]">R.</span>
+            <span className="font-bold text-accent min-w-[24px]">℟.</span>
             <span className="font-semibold">
               {trimmedLine.substring(2).trim()}
             </span>
+          </p>
+        );
+      }
+      if (trimmedLine.startsWith("Ave Maria...")) {
+        return (
+          <p
+            key={index}
+            className={`${
+              isLatin ? "prayer-text-latin" : "prayer-text"
+            } flex gap-2`}
+          >
+            <span className="font-bold text-primary min-w-[24px]">Ave Maria...</span>
+            <span>{trimmedLine.substring(12).trim()}</span>
           </p>
         );
       }
@@ -64,7 +77,7 @@ const BilingualPrayer = ({
             key={index}
             className={`${
               isLatin ? "prayer-text-latin" : "prayer-text"
-            } font-bold text-primary mt-4`}
+            } font-bold text-accent mt-4`}
           >
             {trimmedLine}
           </p>

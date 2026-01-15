@@ -4,11 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Devotionarium Design System - Traditional Catholic Aesthetic */
+ 
 
 @layer base {
   :root {
-    /* Main palette - Antique book inspired */
+   
     --background: 35 30% 90%;
     --foreground: 25 30% 15%;
 
@@ -18,19 +18,18 @@
     --popover: 35 25% 88%;
     --popover-foreground: 25 30% 15%;
 
-    /* Primary - Dark brown/sepia */
+    
     --primary: 25 35% 20%;
     --primary-foreground: 35 30% 92%;
-
-    /* Secondary - Lighter cream */
+ 
     --secondary: 35 20% 85%;
     --secondary-foreground: 25 35% 20%;
 
-    /* Muted - Aged paper */
+     
     --muted: 35 15% 80%;
     --muted-foreground: 25 20% 40%;
 
-    /* Accent - Subtle gold */
+    
     --accent: 40 50% 45%;
     --accent-foreground: 35 30% 95%;
 
@@ -43,7 +42,7 @@
 
     --radius: 0.25rem;
 
-    /* Custom Devotionarium colors */
+    
     --cream: 35 30% 90%;
     --ivory: 40 25% 93%;
     --cafe-au-lait: 30 25% 75%;
@@ -53,7 +52,7 @@
     --gold: 40 55% 50%;
     --gold-subtle: 40 40% 65%;
 
-    /* Sidebar - keeping for compatibility */
+    
     --sidebar-background: 35 30% 90%;
     --sidebar-foreground: 25 30% 15%;
     --sidebar-primary: 25 35% 20%;
@@ -65,7 +64,7 @@
   }
 
   .dark {
-    /* Dark mode maintains warm tones */
+  
     --background: 25 30% 12%;
     --foreground: 35 25% 88%;
 
@@ -117,7 +116,7 @@
 }
 
 @layer components {
-  /* Prayer Card Style - Mobile First */
+ 
   .prayer-card {
     @apply relative flex items-center justify-center gap-3 px-4 py-4 sm:px-8 sm:py-5;
     @apply bg-gradient-to-br from-ivory via-cream to-aged-paper;

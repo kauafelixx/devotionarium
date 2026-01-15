@@ -23,7 +23,7 @@ const PrayerMenu = ({ prayers, currentPrayerId, onSelectPrayer }: PrayerMenuProp
 
   return (
     <div className="mb-6">
-      {/* Menu Toggle Button */}
+       
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex items-center justify-between px-4 py-3 sm:px-6 sm:py-4 bg-gradient-to-r from-ivory via-cream to-aged-paper border border-sepia/30 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300"
@@ -42,7 +42,7 @@ const PrayerMenu = ({ prayers, currentPrayerId, onSelectPrayer }: PrayerMenuProp
         <span className="text-accent text-xs">❧</span>
       </button>
 
-      {/* Menu Dropdown */}
+     
       <div
         className={`mt-2 overflow-hidden transition-all duration-300 ease-in-out ${
           isOpen ? "max-h-fit opacity-100" : "max-h-0 opacity-0"

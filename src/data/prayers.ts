@@ -1,5 +1,3 @@
-
-
 export interface Prayer {
   id: string;
   titlePortugues: string;
@@ -198,12 +196,17 @@ Amen.`,
     ],
   },
 
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
 
-
-
-
-
-  
   {
     categoryId: "oracoes-manha",
     categoryTitle: "Orações da Manhã",
@@ -228,7 +231,16 @@ Amen.`,
       },
     ],
   },
-
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
   {
     categoryId: "oracoes-noite",
     categoryTitle: "Orações da Noite",
@@ -244,7 +256,16 @@ Amen.`,
       },
     ],
   },
-
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
   {
     categoryId: "nossa-senhora",
     categoryTitle: "A Nossa Senhora",
@@ -269,7 +290,16 @@ Amen.`,
       },
     ],
   },
-
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
   {
     categoryId: "sao-jose",
     categoryTitle: "A São José",
@@ -285,7 +315,16 @@ Amen.`,
       },
     ],
   },
-
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
   {
     categoryId: "antes-missa",
     categoryTitle: "Antes da Santa Missa",
@@ -301,7 +340,16 @@ Amen.`,
       },
     ],
   },
-
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
   {
     categoryId: "acao-gracas",
     categoryTitle: "Para Ação de Graças",
@@ -317,7 +365,16 @@ Amen.`,
       },
     ],
   },
-
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
   {
     categoryId: "devocoes-eucaristicas",
     categoryTitle: "Devoções Eucarísticas",
@@ -333,7 +390,16 @@ Amen.`,
       },
     ],
   },
-
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
   {
     categoryId: "oracoes-diversas",
     categoryTitle: "Orações Diversas",
@@ -349,7 +415,16 @@ Amen.`,
       },
     ],
   },
-
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
   {
     categoryId: "ladainhas",
     categoryTitle: "Ladainhas",
@@ -367,14 +442,22 @@ Amen.`,
   },
 ];
 
-// Helper function to get category by ID
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 export const getCategoryById = (
   categoryId: string
 ): PrayerCategory | undefined => {
   return prayerCategories.find((cat) => cat.categoryId === categoryId);
 };
 
-// Helper function to get prayer by ID within a category
 export const getPrayerById = (
   categoryId: string,
   prayerId: string

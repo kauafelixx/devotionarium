@@ -70,7 +70,9 @@ const BilingualPrayer = ({
         trimmedLine.startsWith("Oremus:") ||
         trimmedLine.startsWith("oremos:") ||
         trimmedLine.startsWith("orémus:") ||
-        trimmedLine.startsWith("oremus:")
+        trimmedLine.startsWith("oremus:") ||
+        trimmedLine.startsWith("Gloria Patri...") ||
+        trimmedLine.startsWith("Glória ao Pai...")
       ) {
         return (
           <p

@@ -5,7 +5,7 @@ import PrayerMenu from "@/components/PrayerMenu";
 import { getCategoryById } from "@/data/prayers";
 
 const AntesMissa = () => {
-  const category = getCategoryById("antes-missa");
+  const category = getCategoryById("antes-e-depois-da-missa");
   const [selectedPrayerId, setSelectedPrayerId] = useState(category?.prayers[0]?.id || "");
   
   const selectedPrayer = category?.prayers.find((p) => p.id === selectedPrayerId);

@@ -10,7 +10,7 @@ const Index = () => {
     { to: "/oracoes-noite", label: "Orações da Noite" },
     { to: "/nossa-senhora", label: "A Nossa Senhora" },
     { to: "/sao-jose", label: "A São José" },
-    { to: "/antes-missa", label: "Antes da Santa Missa" },
+    { to: "/antes-missa", label: "Antes e depois da Santa Missa" },
     { to: "/acao-gracas", label: "Para Ação de Graças" },
     { to: "/devocoes-eucaristicas", label: "Devoções Eucarísticas" },
     { to: "/oracoes-diversas", label: "Orações Diversas" },

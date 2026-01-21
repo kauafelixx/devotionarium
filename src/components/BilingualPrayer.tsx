@@ -65,7 +65,10 @@ const BilingualPrayer = ({
       }
 
       if (
+          trimmedLine.startsWith("Orémus.") ||
+        trimmedLine.startsWith("Oremus.") ||
         trimmedLine.startsWith("Oremos:") ||
+         trimmedLine.startsWith("Oremos") ||
         trimmedLine.startsWith("Orémus:") ||
         trimmedLine.startsWith("Oremus:") ||
         trimmedLine.startsWith("oremos:") ||
